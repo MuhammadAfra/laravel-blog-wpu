@@ -4,7 +4,7 @@
     <h3>{{ $posts->title }}</h3>
     {{-- <h5>{{ $post["author"] }}</h5> --}}
 
-    <p>By. <a href="#" class="text-decoration-none">{{ $posts->user->name }}</a> in <a href="/categories/{{ $posts->category->slug }}" class="text-decoration-none">{{ $posts->category->name }}</a></p>
+    <p>By. <a href="/authors/{{ $posts->author->username }}" class="text-decoration-none">{{ $posts->author->name }}</a> in <a href="/categories/{{ $posts->category->slug }}" class="text-decoration-none">{{ $posts->category->name }}</a></p>
     {!! $posts->body !!}
 
     {{-- Post::create([
